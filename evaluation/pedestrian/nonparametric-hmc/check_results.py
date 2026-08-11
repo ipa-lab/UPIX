@@ -34,6 +34,10 @@ else:
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+plt.rcParams['pdf.fonttype'] = 42  # TrueType, not Type 3
+plt.rcParams['ps.fonttype'] = 42
+
 gt_xs = np.load("evaluation/pedestrian/gt_xs-100.npy")
 gt_cdf = np.load("evaluation/pedestrian/gt_cdf-100-1_000_000_000_000.npy")
 gt_pdf = np.load("evaluation/pedestrian/gt_pdf_est-100-1_000_000_000_000.npy")

@@ -24,6 +24,8 @@ def is_latex_available():
     return all(shutil.which(cmd) is not None for cmd in required_cmds)
 
 plt.rcParams['text.usetex'] = is_latex_available()
+plt.rcParams['pdf.fonttype'] = 42  # TrueType, not Type 3
+plt.rcParams['ps.fonttype'] = 42
 
 def df_from_json_dir(dir, keep_info_subdicts: list[str], discard_names: list[str]):
     results = []

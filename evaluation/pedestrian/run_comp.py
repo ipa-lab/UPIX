@@ -138,6 +138,8 @@ if __name__ == "__main__":
         assert start_weighted_samples is not None
         start_samples, start_weights = start_weighted_samples.unstack().get()
         
+        plt.rcParams['pdf.fonttype'] = 42  # TrueType, not Type 3
+        plt.rcParams['ps.fonttype'] = 42
         plt.figure(figsize=(5,2.5))
         plt.hist(start_samples, weights=start_weights, density=True, bins=100, alpha=0.5)
         plt.plot(gt_xs, gt_pdf, label="ground truth")

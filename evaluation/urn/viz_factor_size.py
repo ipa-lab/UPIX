@@ -22,6 +22,8 @@ log_a100 = open(pathlib.Path(folder, "urn/log_a100.txt"), "r").read()
 
 import re
 import matplotlib.pyplot as plt
+plt.rcParams['pdf.fonttype'] = 42  # TrueType, not Type 3
+plt.rcParams['ps.fonttype'] = 42
 
 time = [float(t) for t in re.findall(r"Finished inference task for N=\d+ in (\d+.\d+)s", log_cpu)]
 l40s_time = [float(t) for t in re.findall(r"Finished inference task for N=\d+ in (\d+.\d+)s", log_l40s)]

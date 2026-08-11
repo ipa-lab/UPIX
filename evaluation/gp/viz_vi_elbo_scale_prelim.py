@@ -68,6 +68,8 @@ if __name__ == "__main__":
         #     plt.plot(advi_elbo, label=f"{n_runs} x L={L}")
             
     
+    plt.rcParams['pdf.fonttype'] = 42  # TrueType, not Type 3
+    plt.rcParams['ps.fonttype'] = 42
     plt.xlabel("iteration")
     plt.ylabel("ELBO")
     leg = plt.legend(ncols=2)
