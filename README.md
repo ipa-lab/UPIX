@@ -17,7 +17,7 @@ UPIX provides constructs for **programmable inference**: we enable the user to c
 - how the inference is run in the *conquer step*
 - how the approximations of the sub-models are *combined*
 
-Cite:
+Cite [OOPSLA2026 paper](https://doi.org/10.1145/3839533):
 ```bibtex
 @article{boeck2026upix,
   title={Probabilistic Programming with Programmable Divide-Conquer-Combine Inference on Modern Hardware},
